@@ -1,0 +1,9 @@
+body {
+    font-family: "IBM Plex Sans Thai Looped";
+    padding: 2px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+}
