@@ -17,7 +17,7 @@
 <body>
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/index.html">Pink Palace</a>
+            <a class="navbar-brand" href="/index.html"><img src="/asset/palace.png" alt="" class="logo"> Pink Palace</a>
             <ul class="nav nav-pills">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-newspaper"></i> ข่าวสาร</a>
@@ -42,11 +42,89 @@
             <button type="button" class="btn btn-success">Login</button>
         </div>
     </nav>
+
     <div class="container-fluid" id="annoucement">
         <span class="marquee">📣 ประกาศ: ท่านใดลืมโทรศัพท์ไว้ที่ห้องน้ำชั้น 5
             กรุณาติดต่อรับคืนที่ตึกวิชาการนักศึกษา 📣</span>
     </div>
-    <main></main>
+
+    <main>
+        <div class="" id="filtering">
+            <button class="btn active" onclick=""> ทั้งหมด</button>
+            <button class="btn" onclick=""> มหาลัย</button>
+            <button class="btn" onclick=""> กิจกรรม</button>
+            <button class="btn" onclick=""> การเรียน</button>
+            <button class="btn" onclick=""> ชีวิต</button>
+        </div>
+        <div class="container " id="newses">
+            <div class="row">
+                <div class="col">
+                    <div class="news-post card mb-3" id="news-1">
+                        <div class="row p-2">
+                            <div class="col"><img class="border-bottom mx-auto d-block" src="/asset/palace.png" alt="">
+                            </div>
+                            <div class="col">
+                                <h6 class="card-title">คณะวิทยาศาสตร์และเทคโนโลยี ม.ราชภัฏสวนสุนันทา จัดงาน Open House
+                                    ดึงดูดนักเรียนกว่าพันคน!</h6>
+                                <div class="col d-flex flex-nowrap overflow-auto">
+                                    <span class="badge rounded-pill text-bg-secondary">คณะวิทยาศาสตร์และเทคโนโลยี</span>
+                                    <span class="badge rounded-pill text-bg-secondary">OpenHouse</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="news-post card mb-3" id="news-2">
+                        <div class="row p-2">
+                            <div class="col"><img class="border-bottom mx-auto d-block" src="/asset/palace.png" alt="">
+                            </div>
+                            <div class="col">
+                                <h6 class="card-title">สวนสุนันทา เปิดตัวหลักสูตรใหม่! เตรียมพร้อมนักศึกษาเข้าสู่ยุค AI</h6>
+                                <div class="col d-flex flex-nowrap overflow-auto">
+                                    <span class="badge rounded-pill text-bg-secondary">คณะวิทยาศาสตร์และเทคโนโลยี</span>
+                                    <span class="badge rounded-pill text-bg-secondary">OpenHouse</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="news-post card mb-3" id="news-3">
+                        <div class="row p-2">
+                            <div class="col"><img class="border-bottom mx-auto d-block" src="/asset/palace.png" alt="">
+                            </div>
+                            <div class="col">
+                                <h6 class="card-title">นักศึกษา ม.ราชภัฏสวนสุนันทา คว้าแชมป์การแข่งขันเขียนโปรแกรมระดับประเทศ!</h6>
+                                <div class="col d-flex flex-nowrap overflow-auto">
+                                    <span class="badge rounded-pill text-bg-secondary">คณะวิทยาศาสตร์และเทคโนโลยี</span>
+                                    <span class="badge rounded-pill text-bg-secondary">OpenHouse</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="news-post card mb-3" id="news-4">
+                        <div class="row p-2">
+                            <div class="col"><img class="border-bottom mx-auto d-block" src="/asset/palace.png" alt="">
+                            </div>
+                            <div class="col">
+                                <h6 class="card-title">คณะวิทย์ฯ สวนสุนันทา จัดเวิร์กช็อป "Cybersecurity 101" เพื่อเสริมสร้างความปลอดภัยในโลกออนไลน์</h6>
+                                <div class="col d-flex flex-nowrap overflow-auto">
+                                    <span class="badge rounded-pill text-bg-secondary">คณะวิทยาศาสตร์และเทคโนโลยี</span>
+                                    <span class="badge rounded-pill text-bg-secondary">OpenHouse</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
     <footer>
         <div class="" id="bootstrap">Powered by BOOTSTRAP. <i class="bi bi-bootstrap-fill"></i></div>
     </footer>

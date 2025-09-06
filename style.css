@@ -3,6 +3,11 @@ body {
     padding: 2px;
 }
 
+.logo {
+    height: 30px;
+    margin-right: 8px;
+}
+
 #login-button {
     margin-left: 8px;
 }
@@ -23,9 +28,14 @@ body {
     0% {
         transform: translateX(100%);
     }
+
     100% {
         transform: translateX(-100%);
     }
+}
+
+#filtering {
+    padding: 2vh 12vh;
 }
 
 #highlight {
