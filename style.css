@@ -8,10 +8,6 @@ body {
     margin-right: 8px;
 }
 
-/* #login-button {
-    margin-left: 8px;
-} */
-
 #annoucement {
     background-color: pink;
     padding: 10px;
@@ -50,7 +46,3 @@ body {
     width: 100%;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-}
