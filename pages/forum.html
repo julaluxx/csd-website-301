@@ -17,7 +17,8 @@
 <body>
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/index.html"><img src="/asset/palace.png" alt="" class="logo img-thumbnail"> Pink Palace</a>
+            <a class="navbar-brand" href="/index.html"><img src="/asset/palace.png" alt="" class="logo img-thumbnail">
+                Pink Palace</a>
             <ul class="nav nav-pills">
                 <li class="nav-item">
                     <a class="nav-link" href="news.html">ข่าวสาร</a>
@@ -75,7 +76,61 @@
         <span class="marquee">📣 ประกาศ: ท่านใดลืมโทรศัพท์ไว้ที่ห้องน้ำชั้น 5
             กรุณาติดต่อรับคืนที่ตึกวิชาการนักศึกษา 📣</span>
     </div>
-    <main></main>
+    <main>
+        <div class="d-flex align-items-center" id="top-bar">
+            <div id="filtering">
+                <button class="btn active" onclick=""> ทั้งหมด</button>
+                <button class="btn" onclick=""> มหาลัย</button>
+                <button class="btn" onclick=""> กิจกรรม</button>
+                <button class="btn" onclick=""> การเรียน</button>
+                <button class="btn" onclick=""> ชีวิต</button>
+                <span class="dropdown">
+                    <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        สาขา
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">วิทยาการคอมพิวเตอร์</a></li>
+                        <li><a class="dropdown-item" href="#">นิติวิทยาศาสตร์</a></li>
+                        <li><a class="dropdown-item" href="#">คหกรรมศาสตร์</a></li>
+                    </ul>
+                </span>
+            </div>
+            <div id="new-posting">
+                <button class="btn btn-primary" onclick=""><i class="bi bi-plus-circle"></i> สร้างโพสต์ใหม่</button>
+            </div>
+        </div>
+
+        <div style="grid-template-columns: 1fr 1fr;" class="d-grid gap-3 container-lg" id="posts">
+            <div class="p-2" style="background-color: violet;">
+                <div style="grid-template-columns: 1fr 2fr;" class="d-grid gap-3" id="post-1">
+                    <div class="p2"><img src="/asset/image1.png" alt="" style="width: 200px;"></div>
+                    <div class="p2">test test some text goes here.</div>
+                </div>
+            </div>
+
+            <div class="p-2" style="background-color: violet;">
+                <div style="grid-template-columns: 1fr 2fr;" class="d-grid gap-3" id="post-2">
+                    <div class="p2"><img src="/asset/image1.png" alt="" style="width: 200px;"></div>
+                    <div class="p2">test test some text goes here.</div>
+                </div>
+            </div>
+
+            <div class="p-2" style="background-color: violet;">
+                <div style="grid-template-columns: 1fr 2fr;" class="d-grid gap-3" id="post-3">
+                    <div class="p2"><img src="/asset/image1.png" alt="" style="width: 200px;"></div>
+                    <div class="p2">test test some text goes here.</div>
+                </div>
+            </div>
+
+            <div class="p-2" style="background-color: violet;">
+                <div style="grid-template-columns: 1fr 2fr;" class="d-grid gap-3" id="post-4">
+                    <div class="p2"><img src="/asset/image1.png" alt="" style="width: 200px;"></div>
+                    <div class="p2">test test some text goes here.</div>
+                </div>
+            </div>
+        </div>
+    </main>
     <footer class="container-fluid text-center p-2">
         <div class="" id="bootstrap">Powered by BOOTSTRAP <i class="bi bi-bootstrap-fill"></i></div>
     </footer>
