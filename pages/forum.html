@@ -17,7 +17,8 @@
 <body>
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/index.html"><img src="/asset/palace.png" alt="" class="logo img-thumbnail">
+            <a class="navbar-brand" href="/index.html" style="color: rgb(255, 130, 150);"><img src="/asset/palace.png"
+                    alt="" class="logo img-thumbnail">
                 วังชมพู</a>
             <ul class="nav nav-pills">
                 <li class="nav-item">
@@ -78,18 +79,33 @@
     </div>
     <main>
         <div class="d-flex align-items-center" id="top-bar">
+            
             <div id="filtering">
                 <button class="btn active" onclick=""> ทั้งหมด</button>
-                <button class="btn" onclick=""> มหาลัย</button>
-                <button class="btn" onclick=""> กิจกรรม</button>
-                <button class="btn" onclick=""> การเรียน</button>
-                <button class="btn" onclick=""> ชีวิต</button>
+
+                <button class="btn" onclick=""> มหาลัย
+
+                </button>
+
+                <button class="btn" onclick=""> การเรียน
+
+                </button>
+                
                 <span class="dropdown">
-                    <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                    <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" onclick="">
+                        ชีวิต
+                    </button>
+                    <ul class="dropdown-menu" id="life-submenu">
+                        <li><a class="dropdown-item" href="#">ร้องทุกข์</a></li>
+                        <li><a class="dropdown-item" href="#">ของหาย</a></li>
+                    </ul>
+                </span>
+
+                <span class="dropdown">
+                    <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" onclick="">
                         สาขา
-                    </a>
-                    <ul class="dropdown-menu">
+                    </button>
+                    <ul class="dropdown-menu" id="major-list">
                         <li><a class="dropdown-item" href="#">วิทยาการคอมพิวเตอร์</a></li>
                         <li><a class="dropdown-item" href="#">นิติวิทยาศาสตร์</a></li>
                         <li><a class="dropdown-item" href="#">คหกรรมศาสตร์</a></li>
