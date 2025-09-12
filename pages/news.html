@@ -2,166 +2,214 @@
 <html lang="th">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>วังชมพู</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>วังชมพู - ข่าวสาร</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=K2D:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=K2D:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
-  <!-- CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
     <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-body-primary shadow-sm sticky-top">
-    <div class="container-fluid">
-      <a class="navbar-brand fw-bold" href="index.html">
-        <img src="/asset/palace.png" alt="โลโก้วังชมพู" class="logo img-thumbnail me-2" style="max-height:40px;">
-        วังชมพู
-      </a>
-      <!-- Hamburger menu -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
-        aria-controls="navbarMenu" aria-expanded="false" aria-label="เมนูนำทาง">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <!-- Menu -->
-      <div class="collapse navbar-collapse" id="navbarMenu">
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 nav-pills">
-          <li class="nav-item"><a class="nav-link" href="pages/news.html">ข่าวสาร</a></li>
-          <li class="nav-item"><a class="nav-link" href="pages/download.html">ดาวน์โหลด</a></li>
-          <li class="nav-item"><a class="nav-link" href="pages/about.html">เกี่ยวกับ</a></li>
-          <li class="nav-item"><a class="nav-link" href="pages/guide.html">แนะนำ</a></li>
-          <li class="nav-item"><a class="nav-link" href="pages/contact.html">ติดต่อ</a></li>
-        </ul>
-        <form class="d-flex ms-lg-3 mt-2 mt-lg-0" role="search">
-          <input class="form-control me-2" type="search" placeholder="ค้นหา" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">ค้นหา</button>
-        </form>
-      </div>
+    <nav class="navbar navbar-expand-lg bg-body-primary shadow-sm sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="/index.html">
+                <img src="/asset/palace.png" alt="โลโก้วังชมพู" class="logo img-thumbnail me-2"
+                    style="max-height:40px;">
+                วังชมพู
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu" aria-expanded="false" aria-label="เมนูนำทาง">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 nav-pills">
+                    <li class="nav-item"><a class="nav-link active" href="#">ข่าวสาร</a></li>
+                    <li class="nav-item"><a class="nav-link" href="download.html">ดาวน์โหลด</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">เกี่ยวกับ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="guide.html">แนะนำ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">ติดต่อ</a></li>
+                </ul>
+                <form class="d-flex ms-lg-3 mt-2 mt-lg-0" role="search">
+                    <input class="form-control me-2" type="search" placeholder="ค้นหา" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">ค้นหา</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Announcement -->
+    <div class="bg-warning text-dark text-center py-2 overflow-hidden" id="announcement">
+        <span class="marquee">📣 ประกาศ: ท่านใดลืมโทรศัพท์ไว้ที่ห้องน้ำชั้น 5 กรุณาติดต่อรับคืนที่ตึกวิชาการนักศึกษา
+            📣</span>
     </div>
-  </nav>
 
-  <!-- Announcement -->
-  <div class="bg-warning text-dark text-center py-2 overflow-hidden" id="annoucement">
-    <span class="marquee">📣 ประกาศ: ท่านใดลืมโทรศัพท์ไว้ที่ห้องน้ำชั้น 5 กรุณาติดต่อรับคืนที่ตึกวิชาการนักศึกษา 📣</span>
-  </div>
-
-    <main>
-        <div id="filtering">
-            <button class="btn active" onclick=""> ทั้งหมด</button>
-            <button class="btn" onclick=""> มหาลัย
-            </button>
-            <button class="btn" onclick=""> การเรียน
-            </button>
-            <span class="dropdown">
-                <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" onclick="">
-                    ชีวิต
-                </button>
-                <ul class="dropdown-menu" id="life-submenu">
-                    <li><a class="dropdown-item" href="#">ร้องทุกข์</a></li>
-                    <li><a class="dropdown-item" href="#">ของหาย</a></li>
-                </ul>
-            </span>
-
-            <span class="dropdown">
-                <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" onclick="">
-                    สาขา
-                </button>
-                <ul class="dropdown-menu" id="major-list">
-                    <li><a class="dropdown-item" href="#">วิทยาการคอมพิวเตอร์</a></li>
-                    <li><a class="dropdown-item" href="#">นิติวิทยาศาสตร์</a></li>
-                    <li><a class="dropdown-item" href="#">คหกรรมศาสตร์</a></li>
-                </ul>
-            </span>
+    <main class="container my-4">
+        <!-- Filter Buttons -->
+        <div id="filters" class="mb-4 d-flex flex-wrap gap-2">
+            <button class="btn btn-primary active" data-filter="all">ทั้งหมด</button>
+            <button class="btn btn-primary" data-filter="uni">มหาลัย</button>
+            <button class="btn btn-primary" data-filter="study">การเรียน</button>
+            <button class="btn btn-primary" data-filter="life">ชีวิต</button>
         </div>
 
-        <div class="container " id="newses">
-            <div class="row">
-                <div class="col">
-                    <div class="news-post card mb-3" id="news-1">
-                        <div class="row p-2">
-                            <div class="col"><img class="border-bottom mx-auto d-block" src="/asset/palace.png" alt="">
+        <!-- News Posts -->
+        <div class="container mt-4" id="newses">
+            <div class="row g-4">
+
+                <!-- ข่าว 1 -->
+                <div class="col-12 col-md-6 news-post uni">
+                    <div class="card shadow-sm h-100">
+                        <div class="row g-0">
+                            <div class="col-4 d-flex align-items-center justify-content-center p-2">
+                                <img src="/asset/palace.png" class="img-fluid rounded" alt="ข่าวมหาลัย 1">
                             </div>
-                            <div class="col pt-2">
-                                <h6 class="card-title">คณะวิทยาศาสตร์และเทคโนโลยี ม.ราชภัฏสวนสุนันทา จัดงาน Open House
-                                    ดึงดูดนักเรียนกว่าพันคน!</h6>
-                                <div class="col d-flex flex-nowrap overflow-auto">
-                                    <span class="badge rounded-pill text-bg-secondary">คณะวิทยาศาสตร์และเทคโนโลยี</span>
-                                    <span class="badge rounded-pill text-bg-secondary">OpenHouse</span>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h6 class="card-title">คณะวิทยาศาสตร์และเทคโนโลยี จัด Open House</h6>
+                                    <div class="mb-2 d-flex flex-wrap gap-1">
+                                        <span class="badge bg-secondary">มหาลัย</span>
+                                        <span class="badge bg-secondary">OpenHouse</span>
+                                    </div>
+                                    <p class="card-text text-truncate">
+                                        นักเรียนกว่าพันคนเข้าร่วมกิจกรรมแนะนำคณะและหลักสูตร...</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="news-post card mb-3" id="news-2">
-                        <div class="row p-2">
-                            <div class="col"><img class="border-bottom mx-auto d-block" src="/asset/palace.png" alt="">
+
+                <!-- ข่าว 2 -->
+                <div class="col-12 col-md-6 news-post study">
+                    <div class="card shadow-sm h-100">
+                        <div class="row g-0">
+                            <div class="col-4 d-flex align-items-center justify-content-center p-2">
+                                <img src="/asset/palace.png" class="img-fluid rounded" alt="ข่าวการเรียน 1">
                             </div>
-                            <div class="col pt-2">
-                                <h6 class="card-title">สวนสุนันทา เปิดตัวหลักสูตรใหม่! เตรียมพร้อมนักศึกษาเข้าสู่ยุค AI
-                                </h6>
-                                <div class="col d-flex flex-nowrap overflow-auto">
-                                    <span class="badge rounded-pill text-bg-secondary">คณะวิทยาศาสตร์และเทคโนโลยี</span>
-                                    <span class="badge rounded-pill text-bg-secondary">OpenHouse</span>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h6 class="card-title">สวนสุนันทา เปิดหลักสูตรใหม่ AI</h6>
+                                    <div class="mb-2 d-flex flex-wrap gap-1">
+                                        <span class="badge bg-secondary">การเรียน</span>
+                                        <span class="badge bg-secondary">AI</span>
+                                    </div>
+                                    <p class="card-text text-truncate">
+                                        เตรียมนักศึกษาเข้าสู่ยุคเทคโนโลยีและปัญญาประดิษฐ์...</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="news-post card mb-3" id="news-3">
-                        <div class="row p-2">
-                            <div class="col"><img class="border-bottom mx-auto d-block" src="/asset/palace.png" alt="">
+
+                <!-- ข่าว 3 -->
+                <div class="col-12 col-md-6 news-post life">
+                    <div class="card shadow-sm h-100">
+                        <div class="row g-0">
+                            <div class="col-4 d-flex align-items-center justify-content-center p-2">
+                                <img src="/asset/palace.png" class="img-fluid rounded" alt="ข่าวชีวิต 1">
                             </div>
-                            <div class="col pt-2">
-                                <h6 class="card-title">นักศึกษา ม.ราชภัฏสวนสุนันทา
-                                    คว้าแชมป์การแข่งขันเขียนโปรแกรมระดับประเทศ!</h6>
-                                <div class="col d-flex flex-nowrap overflow-auto">
-                                    <span class="badge rounded-pill text-bg-secondary">คณะวิทยาศาสตร์และเทคโนโลยี</span>
-                                    <span class="badge rounded-pill text-bg-secondary">OpenHouse</span>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h6 class="card-title">นักศึกษาคว้าแชมป์การแข่งขันเขียนโปรแกรม</h6>
+                                    <div class="mb-2 d-flex flex-wrap gap-1">
+                                        <span class="badge bg-secondary">ชีวิต</span>
+                                        <span class="badge bg-secondary">การแข่งขัน</span>
+                                    </div>
+                                    <p class="card-text text-truncate">
+                                        นักศึกษาจากคณะวิทยาศาสตร์และเทคโนโลยีได้รับรางวัลระดับประเทศ...</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="news-post card mb-3" id="news-4">
-                        <div class="row p-2">
-                            <div class="col"><img class="border-bottom mx-auto d-block" src="/asset/palace.png" alt="">
+
+                <!-- ข่าว 4 -->
+                <div class="col-12 col-md-6 news-post uni study">
+                    <div class="card shadow-sm h-100">
+                        <div class="row g-0">
+                            <div class="col-4 d-flex align-items-center justify-content-center p-2">
+                                <img src="/asset/palace.png" class="img-fluid rounded" alt="ข่าวรวม มหาลัย+การเรียน">
                             </div>
-                            <div class="col pt-2">
-                                <h6 class="card-title">คณะวิทย์ฯ สวนสุนันทา จัดเวิร์กช็อป "Cybersecurity 101"
-                                    เพื่อเสริมสร้างความปลอดภัยในโลกออนไลน์</h6>
-                                <div class="col d-flex flex-nowrap overflow-auto">
-                                    <span class="badge rounded-pill text-bg-secondary">คณะวิทยาศาสตร์และเทคโนโลยี</span>
-                                    <span class="badge rounded-pill text-bg-secondary">OpenHouse</span>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h6 class="card-title">เวิร์กช็อป Cybersecurity 101</h6>
+                                    <div class="mb-2 d-flex flex-wrap gap-1">
+                                        <span class="badge bg-secondary">มหาลัย</span>
+                                        <span class="badge bg-secondary">การเรียน</span>
+                                    </div>
+                                    <p class="card-text text-truncate">
+                                        เสริมสร้างความปลอดภัยในโลกออนไลน์ให้แก่นักศึกษา...</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- ข่าว 5 -->
+                <div class="col-12 col-md-6 news-post life">
+                    <div class="card shadow-sm h-100">
+                        <div class="row g-0">
+                            <div class="col-4 d-flex align-items-center justify-content-center p-2">
+                                <img src="/asset/palace.png" class="img-fluid rounded" alt="ข่าวชีวิต 2">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h6 class="card-title">นักศึกษาร่วมกิจกรรมสังคม</h6>
+                                    <div class="mb-2 d-flex flex-wrap gap-1">
+                                        <span class="badge bg-secondary">ชีวิต</span>
+                                    </div>
+                                    <p class="card-text text-truncate">
+                                        นักศึกษามีส่วนร่วมในกิจกรรมสังคมเพื่อสร้างความตระหนักรู้...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ข่าว 6 -->
+                <div class="col-12 col-md-6 news-post uni">
+                    <div class="card shadow-sm h-100">
+                        <div class="row g-0">
+                            <div class="col-4 d-flex align-items-center justify-content-center p-2">
+                                <img src="/asset/palace.png" class="img-fluid rounded" alt="ข่าวมหาลัย 2">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h6 class="card-title">คณะวิทย์ฯ เปิดตัวหลักสูตรใหม่</h6>
+                                    <div class="mb-2 d-flex flex-wrap gap-1">
+                                        <span class="badge bg-secondary">มหาลัย</span>
+                                    </div>
+                                    <p class="card-text text-truncate">
+                                        นักศึกษาเตรียมความพร้อมเข้าสู่โลกการเรียนรู้ยุคใหม่...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
+
     </main>
 
-    <footer class="container-fluid text-center p-2">
-        <div class="" id="bootstrap">Powered by BOOTSTRAP <i class="bi bi-bootstrap-fill"></i></div>
+    <!-- Footer -->
+    <footer class="container-fluid text-center py-3 mt-5">
+        <div>Powered by <i class="bi bi-bootstrap-fill text-primary"></i> Bootstrap</div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
