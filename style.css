@@ -1,47 +1,51 @@
+:root {
+  --bs-primary: #ff82a0;   
+  --bs-secondary: #6c757d; 
+  --bs-accent: #ffd166;    
+  --bs-body-bg: #fff8fb;   
+
+  --bs-success: #81c995;   
+  --bs-danger: #ff4d6d;    
+}
+
+.navbar .nav-link:hover {
+    color: #ff4d6d;
+}
+
 body {
-    font-family: "K2D", sans-serif;
-    padding: 2px;
-}
-
-.logo {
-    height: 30px;
-    margin-right: 8px;
-}
-
-#annoucement {
-    background-color: pink;
-    padding: 10px;
-    height: 40px;
+    font-family: 'K2D', sans-serif;
 }
 
 .marquee {
     display: inline-block;
     white-space: nowrap;
-    animation: scroll-left 30s linear infinite;
+    animation: marquee 10s linear infinite;
 }
 
-@keyframes scroll-left {
-    0% {
+@keyframes marquee {
+    from {
         transform: translateX(100%);
     }
 
-    100% {
+    to {
         transform: translateX(-100%);
     }
 }
 
-#filtering {
-    padding: 2vh 12vh;
+@media (max-width: 576px) {
+  .marquee {
+    animation-duration: 15s; /* ช้าลงหน่อย */
+    font-size: 0.9rem;
+  }
 }
 
-#highlight {
-    padding: 2vh 12vh;
+.feature-card img {
+    max-height: 200px;
+    object-fit: cover;
 }
 
-.badge {
-    margin: 8px;
-}
-
-#gallery img {
-    width: 100%;
+footer {
+  background: #f8f9fa;
+  color: #444;
+  font-size: 0.9rem;
 }

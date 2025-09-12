@@ -1,157 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-    </style>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>วังชมพู</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=K2D:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+  <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-    <title>วังชมพู</title>
 </head>
 
 <body>
-    <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/index.html" style="color: rgb(255, 130, 150);"><img src="asset/palace.png" alt=""
-                    class="logo img-thumbnail""> วังชมพู</a>
-            <ul class="nav nav-pills">
-                <li class="nav-item">
-                    <a class="nav-link" href="pages/news.html">ข่าวสาร</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="pages/forum.html">ฟอรัม</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="pages/about.html">เกี่ยวกับ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="pages/guide.html">แนะนำ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="pages/contact.html">ติดต่อ</a>
-                </li>
-            </ul>
-            <div class="d-flex m-1">
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="ค้นหา" aria-label="Search" />
-                    <button class="btn btn-outline-success me-2" type="submit">ค้นหา</button>
-                </form>
-                <div class="dropdown ">
-                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
-                        aria-expanded="false" data-bs-auto-close="outside">
-                        ลงชื่อเข้าใช้
-                    </button>
-                    <form class="dropdown-menu dropdown-menu-end p-4" style="min-width: 300px;">
-                        <div class="mb-3">
-                            <label for="exampleDropdownFormEmail2" class="form-label">ที่อยู่อีเมล</label>
-                            <input type="email" class="form-control" id="exampleDropdownFormEmail2"
-                                placeholder="email@example.com">
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleDropdownFormPassword2" class="form-label">รหัสผ่าน</label>
-                            <input type="password" class="form-control" id="exampleDropdownFormPassword2"
-                                placeholder="Password">
-                        </div>
-                        <div class="mb-3">
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="dropdownCheck2">
-                                <label class="form-check-label" for="dropdownCheck2">
-                                    จดจำฉัน
-                                </label>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary">ลงชื่อเข้าใช้</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <div class="container-fluid overflow-hidden" id="annoucement">
-        <span class="marquee">📣 ประกาศ: ท่านใดลืมโทรศัพท์ไว้ที่ห้องน้ำชั้น 5
-            กรุณาติดต่อรับคืนที่ตึกวิชาการนักศึกษา 📣</span>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-body-primary shadow-sm sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <img src="asset/palace.png" alt="โลโก้วังชมพู" class="logo img-thumbnail me-2" style="max-height:40px;">
+        วังชมพู
+      </a>
+      <!-- Hamburger menu -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+        aria-controls="navbarMenu" aria-expanded="false" aria-label="เมนูนำทาง">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Menu -->
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 nav-pills">
+          <li class="nav-item"><a class="nav-link" href="pages/news.html">ข่าวสาร</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/download.html">ดาวน์โหลด</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/about.html">เกี่ยวกับ</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/guide.html">แนะนำ</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/contact.html">ติดต่อ</a></li>
+        </ul>
+        <form class="d-flex ms-lg-3 mt-2 mt-lg-0" role="search">
+          <input class="form-control me-2" type="search" placeholder="ค้นหา" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">ค้นหา</button>
+        </form>
+      </div>
     </div>
-    <main>
-        <div id="highlight" class="carousel slide carousel-dark" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#highlight" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#highlight" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#highlight" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="asset/banner1.png" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="asset/banner2.png" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="asset/banner3.png" class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#highlight" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#highlight" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
+  </nav>
 
-        <div class="container-fluid mt-5" id="features">
-            <div class="row g-4">
-                <div class="col-12 col-md-4">
-                    <div class="row">
-                        <div class="col"><img src="asset/image1.png" alt="" class="img-thumbnail"></div>
-                        <div class="col">
-                            <h6 class="card-title">title</h6>
-                            <div>
-                                <span class="badge rounded-pill text-bg-secondary">ข่าวสาร</span>
-                                <span class="badge rounded-pill text-bg-secondary">แฟชั่น</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4">
-                    <div class="row">
-                        <div class="col"><img src="asset/image2.png" alt="" class="img-thumbnail"></div>
-                        <div class="col">
-                            <h6 class="card-title">title</h6>
-                            <div>
-                                <span class="badge rounded-pill text-bg-secondary">ข่าวสาร</span>
-                                <span class="badge rounded-pill text-bg-secondary">อาหาร</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4">
-                    <div class="row">
-                        <div class="col"><img src="asset/image3.png" alt="" class="img-thumbnail"></div>
-                        <div class="col">
-                            <h6 class="card-title">title</h6>
-                            <div>
-                                <span class="badge rounded-pill text-bg-secondary">ข่าวสาร</span>
-                                <span class="badge rounded-pill text-bg-secondary">อาหาร</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-    <footer class="container-fluid text-center p-2 mt-5">
-        <div class="" id="bootstrap">Powered by BOOTSTRAP <i class="bi bi-bootstrap-fill"></i></div>
-    </footer>
+  <!-- Announcement -->
+  <div class="bg-warning text-dark text-center py-2 overflow-hidden" id="annoucement">
+    <span class="marquee">📣 ประกาศ: ท่านใดลืมโทรศัพท์ไว้ที่ห้องน้ำชั้น 5 กรุณาติดต่อรับคืนที่ตึกวิชาการนักศึกษา 📣</span>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+  <main>
+    <!-- Carousel -->
+    <div id="highlight" class="carousel slide carousel-dark" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#highlight" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#highlight" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#highlight" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="asset/banner1.png" class="d-block w-100" alt="แบนเนอร์ 1">
+        </div>
+        <div class="carousel-item">
+          <img src="asset/banner2.png" class="d-block w-100" alt="แบนเนอร์ 2">
+        </div>
+        <div class="carousel-item">
+          <img src="asset/banner3.png" class="d-block w-100" alt="แบนเนอร์ 3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#highlight" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">ก่อนหน้า</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#highlight" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">ถัดไป</span>
+      </button>
+    </div>
+
+    <!-- Features -->
+    <section class="container mt-5" id="features">
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <div class="card feature-card shadow-sm">
+            <img src="asset/image1.png" class="card-img-top" alt="ข่าวสารแฟชั่น">
+            <div class="card-body">
+              <h6 class="card-title">หัวข้อข่าว</h6>
+              <div class="mb-2">
+                <span class="badge bg-secondary">ข่าวสาร</span>
+                <span class="badge bg-secondary">แฟชั่น</span>
+              </div>
+              <p class="card-text">เนื้อหาตัวอย่างสำหรับข่าวสารหมวดแฟชั่น...</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card feature-card shadow-sm">
+            <img src="asset/image2.png" class="card-img-top" alt="ข่าวสารอาหาร">
+            <div class="card-body">
+              <h6 class="card-title">หัวข้อข่าว</h6>
+              <div class="mb-2">
+                <span class="badge bg-secondary">ข่าวสาร</span>
+                <span class="badge bg-secondary">อาหาร</span>
+              </div>
+              <p class="card-text">เนื้อหาตัวอย่างสำหรับข่าวสารหมวดอาหาร...</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card feature-card shadow-sm">
+            <img src="asset/image3.png" class="card-img-top" alt="ข่าวสารอื่น ๆ">
+            <div class="card-body">
+              <h6 class="card-title">หัวข้อข่าว</h6>
+              <div class="mb-2">
+                <span class="badge bg-secondary">ข่าวสาร</span>
+                <span class="badge bg-secondary">อาหาร</span>
+              </div>
+              <p class="card-text">เนื้อหาตัวอย่างสำหรับข่าวสารทั่วไป...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="container-fluid text-center py-3 mt-5">
+    <div>Powered by <i class="bi bi-bootstrap-fill text-primary"></i> Bootstrap</div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
