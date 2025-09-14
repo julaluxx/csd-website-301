@@ -1,94 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-    </style>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>วังชมพู - ข่าวสาร</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=K2D:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="/style.css">
-    <title>วังชมพู</title>
 </head>
 
 <body>
-    <nav class="navbar bg-body-tertiary">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-primary shadow-sm sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/index.html" style="color: rgb(255, 130, 150);"><img src="/asset/palace.png"
-                    alt="" class="logo img-thumbnail">
-                วังชมพู</a>
-            <ul class="nav nav-pills">
-                <li class="nav-item">
-                    <a class="nav-link" href="news.html">ข่าวสาร</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="download.html">ดาวน์โหลด</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-card-heading"></i>
-                        เกี่ยวกับ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="guide.html">แนะนำ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">ติดต่อ</a>
-                </li>
-            </ul>
-            <div class="d-flex m-1">
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="ค้นหา" aria-label="Search" />
-                    <button class="btn btn-outline-success me-2" type="submit">ค้นหา</button>
+            <a class="navbar-brand fw-bold" href="/index.html">
+                <img src="/asset/palace.png" alt="โลโก้วังชมพู" class="logo img-thumbnail me-2"
+                    style="max-height:40px;">
+                วังชมพู
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu" aria-expanded="false" aria-label="เมนูนำทาง">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 nav-pills">
+                    <li class="nav-item"><a class="nav-link" href="news.html">ข่าวสาร</a></li>
+                    <li class="nav-item"><a class="nav-link" href="download.html">ดาวน์โหลด</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">เกี่ยวกับ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="guide.html">แนะนำ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">ติดต่อ</a></li>
+                </ul>
+                <form class="d-flex ms-lg-3 mt-2 mt-lg-0" role="search">
+                    <input class="form-control me-2" type="search" placeholder="ค้นหา" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">ค้นหา</button>
                 </form>
             </div>
         </div>
     </nav>
 
-    <div class="container-fluid  overflow-hidden" id="annoucement">
-        <span class="marquee">📣 ประกาศ: ท่านใดลืมโทรศัพท์ไว้ที่ห้องน้ำชั้น 5
-            กรุณาติดต่อรับคืนที่ตึกวิชาการนักศึกษา 📣</span>
+    <!-- Announcement -->
+    <div class="bg-warning text-dark text-center py-2 overflow-hidden" id="announcement">
+        <span class="marquee">📣 ประกาศ: ท่านใดลืมโทรศัพท์ไว้ที่ห้องน้ำชั้น 5 กรุณาติดต่อรับคืนที่ตึกวิชาการนักศึกษา
+            📣</span>
     </div>
 
-    <main>
+    <main class="container my-4">
 
-        <div class="container-fluid carousel slide" data-bs-ride="carousel">
+        <!-- Tabs -->
+        <ul class="nav nav-tabs mb-4" id="aboutTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="tab-1" data-bs-toggle="tab" data-bs-target="#content-1"
+                    type="button" role="tab">วังชมพู</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab-2" data-bs-toggle="tab" data-bs-target="#content-2" type="button"
+                    role="tab">สวนสุนันทา</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab-3" data-bs-toggle="tab" data-bs-target="#content-3" type="button"
+                    role="tab">ดอกแก้วเจ้าจอม</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab-4" data-bs-toggle="tab" data-bs-target="#content-4" type="button"
+                    role="tab">พระนางเจ้าสุนันทากุมารีรัตน์</button>
+            </li>
+        </ul>
 
-            <div class="row row-cols-2 p-5 gap-5" id="about-section">
+        <!-- Tabs Content -->
+        <div class="tab-content" id="aboutTabsContent">
 
-                <div class="row row-cols-2" id="main-page">
-                    <div class="col p-2" style="background-color: aqua;">
-                        <img class="img-thumbnail" src="/asset/image2.png" alt="">
+            <!-- Content 1 -->
+            <div class="tab-pane fade show active" id="content-1" role="tabpanel" aria-labelledby="tab-1">
+                <div class="row g-4 align-items-stretch">
+                    <!-- Left column -->
+                    <div class="col-md-6 d-flex">
+                        <div class="card shadow-sm flex-fill">
+                            <img src="/asset/palace.png" class="card-img-top" alt="ภาพตัวอย่าง">
+                            <div class="card-body">
+                                <h5 class="card-title">หัวข้อเกี่ยวกับ วังชมพู</h5>
+                                <p class="card-text">เนื้อหาที่บอกเล่าเรื่องราวต่างๆ ของหัวข้อที่น่าสนใจนี้...</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col p-2" style="background-color: violet;">col2</div>
-                    <div class="col p-2" style="background-color: violet;">col3</div>
-                    <div class="col p-2" style="background-color: aqua;">col4</div>
-                </div>
 
-                <div class="row row-cols-2" id="page-2">
-                    <div class="col" style="background-color: aqua;">
-                        <img class="img-thumbnail" src="/asset/image3.png" alt="">
+                    <!-- Right column -->
+                    <div class="col-md-6 d-flex">
+                        <div class="card shadow-sm flex-fill">
+                            <div class="card-body">
+                                <h5 class="card-title">รายละเอียดเพิ่มเติม</h5>
+                                <p class="card-text">
+                                    นี่คือข้อความบรรยายที่ยาวขึ้น ซึ่งสามารถเล่าเรื่องราว ความเป็นมา
+                                    หรือรายละเอียดเชิงลึกเพิ่มเติม
+                                    เกี่ยวกับหัวข้อที่อยู่ทางด้านซ้าย เหมาะสำหรับใช้เล่าเรื่องยาวๆ
+                                    เพื่อให้ผู้เข้าชมเว็บไซต์เข้าใจได้ชัดเจนยิ่งขึ้น
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col p-2" style="background-color: violet;">col2</div>
-                    <div class="col p-2" style="background-color: violet;">col3</div>
-                    <div class="col p-2" style="background-color: aqua;">col4</div>
                 </div>
 
             </div>
 
-        </div>
+            <!-- Content 2 -->
+            <div class="tab-pane fade" id="content-2" role="tabpanel" aria-labelledby="tab-2">
+                <p>ใส่ข้อมูลหมวดหมู่ 2 ที่นี่...</p>
+            </div>
 
+            <!-- Content 3 -->
+            <div class="tab-pane fade" id="content-3" role="tabpanel" aria-labelledby="tab-3">
+                <p>ใส่ข้อมูลหมวดหมู่ 3 ที่นี่...</p>
+            </div>
+
+            <!-- Content 4 -->
+            <div class="tab-pane fade" id="content-4" role="tabpanel" aria-labelledby="tab-4">
+                <p>ใส่ข้อมูลหมวดหมู่ 4 ที่นี่...</p>
+            </div>
+
+        </div>
     </main>
 
-    <footer class="container-fluid text-center p-2">
-        <div class="" id="bootstrap">Powered by BOOTSTRAP <i class="bi bi-bootstrap-fill"></i></div>
+    <!-- Footer -->
+    <footer class="container-fluid text-center py-3 mt-5">
+        <div>Powered by <i class="bi bi-bootstrap-fill text-primary"></i> Bootstrap</div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
