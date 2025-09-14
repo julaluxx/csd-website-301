@@ -1,15 +1,39 @@
 :root {
-    --bs-primary: #ff82a0;
-    --bs-secondary: #6c757d;
-    --bs-accent: #ffd166;
-    --bs-body-bg: #fff8fb;
+    /* 🎨 Brand Colors */
+    --ssru-pink: #fc7cec;         /* สีหลัก  */
+    --ssru-pink-dark: #e057d4;
+    --ssru-pink-light: #ffd6f9;
 
-    --bs-success: #81c995;
-    --bs-danger: #ff4d6d;
+    --ssru-blue: #3424fb;         /* หัวข้อหลัก / Title */
+    --ssru-blue-dark: #2216a8;
+    --ssru-blue-light: #d5d2ff;
+
+    --ssru-light-blue: #0c6fc1;   /* หัวข้อย่อย / Secondary */
+    --ssru-light-blue-dark: #084d88;
+    --ssru-light-blue-light: #b3d9f5;
+
+    --ssru-green: #2eb04f;        /* ยืนยัน / Positive */
+    --ssru-green-dark: #1f7836;
+    --ssru-green-light: #c6f3d3;
+
+    --ssru-orange: #fa6615;       /* เตือน / Alert */
+    --ssru-orange-dark: #b6460c;
+    --ssru-orange-light: #ffd0b3;
+
+    --ssru-yellow: #ffd700;       /* พื้นหลัง Highlight */
+    --ssru-yellow-dark: #bfa600;
+    --ssru-yellow-light: #fff7cc;
+
+    /* Neutral Colors */
+    --ssru-white: #ffffff;
+    --ssru-gray-light: #f8f9fa;
+    --ssru-gray: #e9ecef;
+    --ssru-gray-dark: #6c757d;
+    --ssru-black: #212529;
 }
 
 .navbar .nav-link:hover {
-    color: #ff4d6d;
+    color: var(--ssru-pink);
 }
 
 body {
@@ -35,7 +59,6 @@ body {
 @media (max-width: 576px) {
     .marquee {
         animation-duration: 15s;
-        /* ช้าลงหน่อย */
         font-size: 0.9rem;
     }
 }
